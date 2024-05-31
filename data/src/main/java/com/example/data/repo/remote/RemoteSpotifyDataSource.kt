@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface RemoteSpotifyDataSource {
 
-    fun getAccessToken(clientId: String, clientSecret: String): String
+    suspend fun getAccessToken(clientId: String, clientSecret: String): String
 
     fun getNewReleases(clientId: String, clientSecret: String): Flow<AlbumsModel>
 
